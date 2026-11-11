@@ -113,11 +113,15 @@ async function page() {
   p.on("console", (m) => { if (m.type() === "error") log("page:", m.text()); });
   return p;
 }
+/** wait for the page to finish; fail if it stops making progress for two minutes */
 async function waitDone(p: Awaited<ReturnType<typeof page>>, onProgress?: (f: number) => void) {
+  let last: unknown = undefined, since = Date.now();
   for (;;) {
     const s = await p.evaluate(() => ({ d: (window as any).__done, e: (window as any).__error, pr: (window as any).__progress }));
     if (s.e) throw new Error("picture: " + s.e);
     if (s.d) return;
+    if (s.pr !== last) { last = s.pr; since = Date.now(); }
+    else if (Date.now() - since > 120_000) throw new Error(`picture: stuck at ${typeof s.pr === "number" ? Math.round(s.pr * 100) + "%" : "loading"} for two minutes`);
     if (onProgress && typeof s.pr === "number") onProgress(s.pr);
     await new Promise((r) => setTimeout(r, 1000));
   }
