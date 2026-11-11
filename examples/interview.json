@@ -1,0 +1,65 @@
+{
+  "title": "The Interview",
+  "cast": {
+    "Kevin":       { "voice": "man", "pitch": 125, "nervous": 0.8, "build": "thin", "color": "blue", "props": ["briefcase"] },
+    "Interviewer": { "voice": "woman", "pitch": 185, "expressive": 0.06, "stiff": true, "color": "green", "props": ["cards"] },
+    "Mum":         { "voice": "old-woman", "color": "amber" },
+    "Anchor":      { "voice": "man", "pitch": 98, "expressive": 0.3, "color": "red" }
+  },
+  "scenes": [
+    {
+      "set": "office",
+      "people": [ { "who": "Interviewer", "pose": "sit", "x": 0.75 } ],
+      "beats": [
+        { "card": "The Interview", "hold": 2.2 },
+        { "enter": "Kevin", "side": "left", "to": 0.3, "speed": 0.8, "gap": 0.3 },
+        { "sit": "Kevin", "gap": 0.2 },
+        { "say": "Interviewer", "text": "So. Tell me about yourself.", "mood": "deadpan", "gap": 0.6 },
+        { "say": "Kevin", "text": "I am a people person.", "mood": "nervous", "gap": 0.4 },
+        { "say": "Interviewer", "text": "This job has no people.", "mood": "deadpan", "gap": 0.5 },
+        { "wait": 1.4 },
+        { "say": "Kevin", "text": "I am also a computer person.", "mood": "nervous" },
+        { "crowd": "laugh", "n": 8, "level": 0.6, "gap": 0.2, "hold": 1.6 },
+        { "say": "Interviewer", "text": "What is your greatest weakness?", "mood": "deadpan", "gap": 0.2 },
+        { "say": "Kevin", "text": "Honesty.", "gap": 0.5 },
+        { "say": "Interviewer", "text": "I do not think that is a weakness.", "gap": 0.4 },
+        { "say": "Kevin", "text": "I do not care what you think.", "mood": "deadpan", "gap": 0.3 },
+        { "crowd": "laugh", "n": 16, "gap": 0.2, "hold": 2.4 },
+        { "do": "hmm", "who": "Interviewer", "gap": 0.2 },
+        { "say": "Interviewer", "text": "When can you start?", "gap": 0.4 },
+        { "do": "gasp", "who": "Kevin", "gap": 0.3 },
+        { "say": "Kevin", "text": "Really?", "mood": "excited" },
+        { "say": "Interviewer", "text": "No.", "mood": "deadpan", "gap": 0.8, "shot": "close" },
+        { "crowd": "laugh", "n": 18, "gap": 0.2, "level": 1.0, "hold": 2.6 }
+      ]
+    },
+    {
+      "set": "car",
+      "people": [ { "who": "Kevin", "pose": "sit", "x": 0.35, "facing": "right" }, { "who": "Mum", "pose": "sit", "x": 0.7, "facing": "right" } ],
+      "beats": [
+        { "say": "Mum", "text": "How did it go?", "gap": 0.5 },
+        { "do": "sigh", "who": "Kevin", "gap": 0.4 },
+        { "say": "Kevin", "text": "They want someone with more people.", "mood": "sad", "gap": 0.2 },
+        { "say": "Mum", "text": "Well. You have me.", "mood": "happy", "gap": 0.4 },
+        { "wait": 1.0 },
+        { "say": "Kevin", "text": "That is the problem.", "mood": "deadpan" },
+        { "crowd": "laugh", "n": 14, "gap": 0.2, "hold": 2.0 },
+        { "say": "Mum", "text": "Rude.", "mood": "deadpan", "gap": 0.1 },
+        { "do": "cough", "who": "Mum", "times": 2, "gap": 0.6 }
+      ]
+    },
+    {
+      "set": "newsroom",
+      "people": [ { "who": "Anchor", "pose": "sit", "x": 0.42 } ],
+      "beats": [
+        { "say": "Anchor", "text": "Breaking news. A local man is still a people person.", "mood": "excited", "gap": 0.5 },
+        { "say": "Anchor", "text": "His mother says he is rude.", "gap": 0.4 },
+        { "say": "Anchor", "text": "Now, the weather.", "gap": 0.6 },
+        { "do": "cough", "who": "Anchor", "times": 1, "gap": 0.3 },
+        { "say": "Anchor", "text": "Some.", "mood": "deadpan", "gap": 0.4 },
+        { "crowd": "laugh", "n": 20, "gap": 0.2, "level": 1.0, "hold": 2.8 },
+        { "wait": 0.8 }
+      ]
+    }
+  ]
+}

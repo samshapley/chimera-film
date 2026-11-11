@@ -1,0 +1,203 @@
+{
+  "title": "Flatmates",
+  "cast": {
+    "Narrator": {
+      "voice": "old-man",
+      "pitch": 95,
+      "rate": 0.9
+    },
+    "Priya": {
+      "voice": "woman",
+      "pitch": 210,
+      "expressive": 0.35,
+      "color": "amber",
+      "props": [
+        "drink"
+      ]
+    },
+    "Tom": {
+      "voice": "man",
+      "pitch": 120,
+      "expressive": 0.3,
+      "color": "blue",
+      "build": "thin"
+    },
+    "Landlord": {
+      "voice": "old-man",
+      "pitch": 88,
+      "rough": 0.4,
+      "color": "red",
+      "build": "round",
+      "props": [
+        "briefcase"
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "set": "living-room",
+      "people": [
+        {
+          "who": "Priya",
+          "pose": "sit",
+          "x": 0.55
+        }
+      ],
+      "beats": [
+        {
+          "card": "Flatmates. Episode one: the rent.",
+          "hold": 2.5
+        },
+        {
+          "say": "Narrator",
+          "text": "Priya had not paid the rent. Neither had Tom.",
+          "gap": 0.4
+        },
+        {
+          "enter": "Tom",
+          "side": "left",
+          "to": 0.15,
+          "gap": 0.2
+        },
+        {
+          "say": "Tom",
+          "text": "Did you pay the rent?",
+          "gap": 0.2
+        },
+        {
+          "say": "Priya",
+          "text": "I thought you paid the rent.",
+          "gap": 0.3
+        },
+        {
+          "say": "Tom",
+          "text": "I thought you thought I paid the rent.",
+          "gap": 0.2
+        },
+        {
+          "crowd": "laugh",
+          "n": 10,
+          "gap": 0.2
+        },
+        {
+          "do": "gasp",
+          "who": "Priya",
+          "gap": 0.6
+        },
+        {
+          "say": "Priya",
+          "text": "Someone is at the door.",
+          "mood": "scared"
+        },
+        {
+          "enter": "Landlord",
+          "side": "right",
+          "to": 0.9,
+          "speed": 0.7,
+          "gap": 0.2
+        },
+        {
+          "say": "Landlord",
+          "text": "Hello. I am here about the rent.",
+          "mood": "deadpan"
+        },
+        {
+          "do": "cough",
+          "who": "Tom",
+          "gap": 0.3
+        },
+        {
+          "say": "Tom",
+          "text": "What rent?",
+          "mood": "nervous",
+          "gap": 0.2
+        },
+        {
+          "crowd": "laugh",
+          "n": 14,
+          "gap": 0.2
+        },
+        {
+          "say": "Landlord",
+          "text": "The rent.",
+          "shot": "close",
+          "mood": "angry"
+        },
+        {
+          "sit": "Tom",
+          "gap": 0.3
+        },
+        {
+          "say": "Tom",
+          "text": "Would you like a cup of tea?",
+          "mood": "happy"
+        },
+        {
+          "do": "sigh",
+          "who": "Landlord",
+          "gap": 0.4
+        },
+        {
+          "crowd": "aww",
+          "n": 8,
+          "gap": 0.2
+        },
+        {
+          "wait": 1.0
+        }
+      ]
+    },
+    {
+      "set": "street",
+      "people": [
+        {
+          "who": "Tom",
+          "x": 0.28
+        },
+        {
+          "who": "Priya",
+          "x": 0.72
+        }
+      ],
+      "beats": [
+        {
+          "say": "Narrator",
+          "text": "Later that night.",
+          "gap": 0.3
+        },
+        {
+          "say": "Priya",
+          "text": "We live on the street now.",
+          "mood": "sad",
+          "gap": 0.3
+        },
+        {
+          "say": "Tom",
+          "text": "At least there is no rent.",
+          "mood": "happy"
+        },
+        {
+          "crowd": "laugh",
+          "n": 16,
+          "gap": 0.2
+        },
+        {
+          "do": "scream",
+          "who": "Priya",
+          "gap": 0.4
+        },
+        {
+          "exit": "Priya",
+          "side": "right",
+          "speed": 2.0
+        },
+        {
+          "wait": 1.2
+        }
+      ]
+    }
+  ],
+  "pronounce": {
+    "Priya": "pre ya"
+  }
+}

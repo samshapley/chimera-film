@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Film</title>
+    <style>
+      html, body { margin: 0; background: #000; height: 100%; overflow: hidden; }
+      #stage { display: block; width: min(100vw, 177.78vh); aspect-ratio: 16 / 9; margin: 0 auto; cursor: pointer; }
+      #hint { position: fixed; left: 0; right: 0; bottom: 8px; text-align: center; color: #4fb6f2; font: 300 13px system-ui; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <canvas id="stage" width="1280" height="720"></canvas>
+    <div id="hint">Click to play / pause</div>
+    <script type="module" src="/src/film.ts"></script>
+  </body>
+</html>

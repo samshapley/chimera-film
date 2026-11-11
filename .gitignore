@@ -1,0 +1,4 @@
+engine/target/
+mcp/node_modules/
+out/
+.DS_Store
